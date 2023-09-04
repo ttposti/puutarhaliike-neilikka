@@ -1,0 +1,321 @@
+/* style.css */
+
+.material-icons {
+  font-family: 'Material Icons';
+  font-weight: normal;
+  font-style: normal;
+  font-size: 24px;  /* Preferred icon size */
+  display: inline-block;
+  line-height: 1;
+  text-transform: none;
+  letter-spacing: normal;
+  word-wrap: normal;
+  white-space: nowrap;
+  direction: ltr;
+
+  /* Support for all WebKit browsers. */
+  -webkit-font-smoothing: antialiased;
+  /* Support for Safari and Chrome. */
+  text-rendering: optimizeLegibility;
+
+  /* Support for Firefox. */
+  -moz-osx-font-smoothing: grayscale;
+
+  /* Support for IE. */
+  font-feature-settings: 'liga';
+}
+/* Reset margins and paddings for body and html */
+body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    
+  }
+  .white-txt-shadow h1,
+.white-txt-shadow h2,
+.white-txt-shadow h3,
+.white-txt-shadow h4,
+.white-txt-shadow h5,
+.white-txt-shadow h6 {
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.836); /* Lisää valkoinen varjo */
+  color: white; /* Varmista, että teksti on valkoinen */
+  font-weight:800;
+}
+  /* Set a background color for the body */
+  body {
+    background-color: #f8f9fa;
+  }
+  .bg-color-orange{
+    background-color: #de4600;
+  }
+  .font-color-green{
+    color: #2b4a25;
+  }
+
+  .div-space {
+    position: relative; /* Tarvitaan ::before-pseudoelementin sijainnin määrittämiseksi */
+  }
+  
+  .div-space::before {
+    content: "";
+    display: block;
+    height: 10px; /* Voit muuttaa tätä arvoa tarpeidesi mukaan */
+    width: 100%; /* Tai tarpeidesi mukaan */
+  }
+  /* Style for the welcome section */
+  .welcome-section {
+    position: relative;
+
+
+    padding: 100px 0; /* Add padding to create space for the content */
+
+    background-image: linear-gradient(rgba(0, 0, 0, 0.2) 2px, transparent 2px),
+    linear-gradient(90deg, rgba(0, 0, 0, 0.2) 2px, transparent 2px);
+background-size: 4px 4px; /* Adjust the size of the grid squares */
+opacity: 1;
+}
+
+  
+  .background-image {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('../img/ketotaustakuva.svg'); /* Use the correct SVG file path */
+    background-size: cover;
+    background-position: center;
+    opacity: 1;
+    z-index: -1;
+  }
+  
+  /* Customize the sticky navbar */
+  .navbar {
+    background-color: #de4600;
+    transition: padding 0.3s, background-color 0.3s;
+  }
+  .logo  {
+    max-width: 100%;
+    height: auto;
+  }
+
+  .slogan-text {
+    font-size: 2em;
+ font-weight:800;
+    max-width: 100%; /* Ensure text doesn't exceed container width */
+  }
+  
+  
+  /* Hakukoneoptimointi */
+  .slogan-text::before {
+    content: "Tervetuloa puutarhaan! Ulkokasvit, sisäkasvit ja kaiken tarvitsemasi saat puutarhaliike Neilikasta."; /* Lisää tarvittaessa enemmän tekstiä */
+    position: absolute;
+    left: -9999px;
+  }
+  .intro-section {
+    background-color: #f7f7f7;
+    padding: 40px;
+    text-align: center;
+  }
+  
+  .intro-section h1 {
+    font-size: 32px;
+    color: #333;
+  }
+  
+  .intro-section p {
+    font-size: 18px;
+    color: #666;
+  }
+  
+
+  .masonry-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 10px;
+  }
+  
+  .masonry-item {
+    background-color: #ffffff6b;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+    padding: 10px;
+ 
+  }
+  
+  .masonry-item img {
+    width: 100%;
+    height: auto;
+    border-radius: 4px;
+    margin-bottom: 10px;
+  }
+  .masonry-item .masonry-inner-txt{
+    background-color: #f9eae1cb;
+    border-radius: 5px;
+    padding:10px;
+
+  }
+  .highlight {
+    min-height:180px;
+  }
+  .masonry-item h3 {
+    font-size: 18px;
+    margin: 0;
+  }
+  
+  .masonry-item p {
+    font-size: 14px;
+    color: #888;
+  }
+  
+  .tall-card {
+    grid-row-end: span 2;
+  }
+  
+  .double-width {
+    grid-column-end: span 2;
+  }
+  
+  @media (max-width: 768px) {
+    .masonry-container {
+      grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    }
+    .tall-card {
+      grid-row-end: span 1;
+    }
+    .double-width {
+      grid-column-end: span 1;
+    }
+  }
+  
+  #masonry-item-open-hours {
+    background: rgba(0, 0, 0, 0.0) url('../img/masonry-image-02.png') no-repeat center center;
+    background-size: cover;
+
+  }
+  #masonry-item-news {
+    background: rgba(0, 0, 0, 0.0) url('../img/masonry-image-03.png') no-repeat center center;
+    background-size: cover;
+
+  }
+
+
+  .site-footer {
+    background-color: #333;
+    color: #fff;
+    padding: 30px 0;
+  }
+  .parent-div-circle {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: auto; /* Voit muuttaa korkeutta tarpeidesi mukaan */
+    background-color: rgba(211, 211, 211, 0); /* Taustaväri esimerkiksi */
+    margin:20px 0px 20px 0px;
+  }
+  
+  .div-circle-red {
+    width: 100px;
+    height: 100px;
+    background-color: #e02a57;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    font-weight: bold;
+    font-size: 16px;
+    box-shadow: 0 0 0 5px white; /* Lisää valkoinen reunaympyrä */
+  }
+  
+  .div-circle-purple {
+    width: 100px;
+    height: 100px;
+    background-color: purple;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    font-weight: bold;
+    font-size: 16px;
+    box-shadow: 0 0 0 5px white; /* Lisää valkoinen reunaympyrä */
+  }
+
+  .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 15px;
+  }
+  .footer-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 0px;
+    flex-wrap: wrap; /* Lisää rivien katkaisu tarvittaessa */
+  }
+  
+  .footer-logo img {
+    width: 150px;
+    height: auto;
+  }
+  
+  .footer-links {
+    display: flex;
+    align-items: center;
+  }
+  
+  .footer-links ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+  }
+  
+  .footer-links li {
+    margin-right: 20px;
+  }
+  
+  .footer-links a {
+    color: #fff;
+    text-decoration: none;
+  }
+  
+  /* Lisää media query mobiilinäkymälle */
+  @media (max-width: 768px) {
+    .footer-links {
+      margin-top: 15px;
+      flex-direction: column;
+      align-items: center;
+    }
+  
+    .footer-links li {
+      margin-right: 0;
+      margin-bottom: 10px;
+    }
+  }
+
+ 
+  
+/* Pieni näyttö */
+@media (max-width: 767px) {
+    .logo img {
+      content: url("../img/logo-puutarhaliike-neilikka-sm.png");
+    }
+  }
+  
+  /* Keskikokoinen näyttö */
+  @media (min-width: 768px) and (max-width: 1199px) {
+    .logo img {
+      content: url("../img/logo-puutarhaliike-neilikka-md.png");
+    }
+  }
+  
+  /* Suuri näyttö */
+  @media (min-width: 1200px) {
+    .logo img {
+      content: url("../img/logo-puutarhaliike-neilikka-md.png");
+    }
+  }
+  
